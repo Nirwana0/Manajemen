@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient_background"
+    android:layout_height="match_parent">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#1E3E62"
+        android:padding="16dp"
+        android:text="Tentang Kami"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Header Title -->
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Tombol Kembali"
+        android:src="@drawable/panah_kembali"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Konten Kosong -->
+    <View
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Poin 1 -->
+    <!-- Nomor poin digeser ke kanan sedikit -->
+
+    <!-- Penjelasan Poin 1 -->
+    <TextView
+        android:id="@+id/point1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:text="1. Manajemen Kepegawaian Berbasis GPS dan Selfie"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header" />
+
+    <TextView
+        android:id="@+id/desc1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Sistem manajemen kepegawaian ini memungkinkan pegawai untuk melakukan absensi dengan menggunakan GPS dan selfie, memastikan kehadiran yang akurat di lokasi yang tepat."
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/point1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp" />
+
+    <!-- Garis Pemisah Poin 1 -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#E0E0E0"
+        app:layout_constraintTop_toBottomOf="@id/desc1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Poin 2 -->
+    <TextView
+        android:id="@+id/point2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="2. Pencatatan Kehadiran Otomatis"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/desc1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="12dp" /> <!-- Nomor poin digeser ke kanan sedikit -->
+
+    <!-- Penjelasan Poin 2 -->
+    <TextView
+        android:id="@+id/desc2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Absensi dilakukan secara otomatis dengan memanfaatkan teknologi GPS dan selfie untuk memastikan pegawai hadir di tempat kerja sesuai waktu yang telah ditentukan."
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/point2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp" />
+
+    <!-- Garis Pemisah Poin 2 -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#E0E0E0"
+        app:layout_constraintTop_toBottomOf="@id/desc2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Poin 3 -->
+    <TextView
+        android:id="@+id/point3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="3. Sistem Keamanan dan Privasi"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/desc2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="12dp" /> <!-- Nomor poin digeser ke kanan sedikit -->
+
+    <!-- Penjelasan Poin 3 -->
+    <TextView
+        android:id="@+id/desc3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Teknologi selfie memastikan hanya pegawai yang sah yang dapat melakukan absensi, sementara GPS memberikan lokasi yang akurat untuk mencegah penyalahgunaan."
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/point3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp" />
+
+    <!-- Garis Pemisah Poin 3 -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#E0E0E0"
+        app:layout_constraintTop_toBottomOf="@id/desc3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Poin 4: Versi Aplikasi -->
+    <TextView
+        android:id="@+id/point4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="4. Versi Aplikasi"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/desc3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="12dp" /> <!-- Nomor poin digeser ke kanan sedikit -->
+
+    <!-- Penjelasan Versi Aplikasi -->
+    <TextView
+        android:id="@+id/desc4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Aplikasi ini menggunakan versi terbaru dengan fitur-fitur terkini yang terus diperbarui untuk memberikan pengalaman terbaik bagi pengguna."
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/point4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

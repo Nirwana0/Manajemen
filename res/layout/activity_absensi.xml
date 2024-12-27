@@ -1,0 +1,182 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".AbsensiActivity">
+
+    <!-- Header Absensi -->
+    <TextView
+        android:id="@+id/header_absensi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#1E3E62"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Absensi"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Tombol Kembali (Panah) -->
+
+    <!-- Layout Jam -->
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="24dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:contentDescription="Tombol Kembali"
+        android:src="@drawable/panah_kembali"
+        app:layout_constraintBottom_toBottomOf="@+id/header_absensi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header_absensi"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/jam_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/header_absensi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/clock_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/jam"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/jam_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Jam"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/clock_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Layout Lokasi -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lokasi_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/jam_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/location_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/lokasi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/lokasi_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Nama Jalan Akan Ditampilkan Di Sini"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/location_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Tombol Buka Kamera -->
+    <Button
+        android:id="@+id/button_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primaryColor"
+        android:text="Buka Kamera"
+        app:layout_constraintTop_toBottomOf="@+id/lokasi_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Instruksi Foto Selfie -->
+    <TextView
+        android:id="@+id/instruction_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Silakan ambil foto selfie untuk absensi"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/button_camera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Foto Selfie -->
+    <ImageView
+        android:id="@+id/selfie_image_view"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Foto Selfie"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@+id/instruction_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Switch Masuk dan Pulang -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/switch_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/selfie_image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Switch
+            android:id="@+id/switch_masuk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masuk"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Switch
+            android:id="@+id/switch_pulang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pulang"
+            app:layout_constraintStart_toEndOf="@+id/switch_masuk"
+            android:layout_marginStart="16dp"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Tombol Kirim Absensi -->
+    <Button
+        android:id="@+id/kirim_absensi"
+        android:layout_width="310dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#003366"
+        android:text="Kirim Absensi"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/switch_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

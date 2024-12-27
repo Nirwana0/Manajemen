@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".cutiActivity">
+
+    <!-- Header Pengajuan Cuti/Izin -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#1E3E62"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/panah_kembali"
+            android:contentDescription="Tombol Kembali"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp" />
+    </RelativeLayout>
+
+    <!-- Header Text -->
+    <TextView
+        android:id="@+id/header_pengajuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Pengajuan Cuti/Izin"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Nama Lengkap -->
+    <EditText
+        android:id="@+id/nama_lengkap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lyr_putih"
+        android:hint="Nama Lengkap"
+        android:padding="12dp"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_pengajuan"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="20dp" />
+
+    <!-- Jabatan -->
+    <EditText
+        android:id="@+id/jabatan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lyr_putih"
+        android:hint="Jabatan"
+        android:padding="12dp"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nama_lengkap"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="12dp" />
+
+    <!-- NIP -->
+    <EditText
+        android:id="@+id/nip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lyr_putih"
+        android:hint="NIP"
+        android:padding="12dp"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jabatan"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="16dp" />
+
+    <!-- Jenis Pengajuan (Spinner) -->
+    <Spinner
+        android:id="@+id/spinner_jenis_pengajuan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nip"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="16dp" />
+
+    <!-- Mulai Cuti -->
+    <EditText
+        android:id="@+id/mulai_cuti"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lyr_putih"
+        android:hint="Mulai Cuti"
+        android:padding="12dp"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_jenis_pengajuan"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="16dp" />
+
+    <!-- Selesai Cuti -->
+    <EditText
+        android:id="@+id/selesai_cuti"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lyr_putih"
+        android:hint="Selesai Cuti"
+        android:padding="12dp"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mulai_cuti"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="16dp" />
+
+    <!-- Alamat Selama Cuti -->
+    <EditText
+        android:id="@+id/alamat_cuti"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lyr_putih"
+        android:hint="Alamat Selama Cuti"
+        android:padding="12dp"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selesai_cuti"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="16dp" />
+
+    <!-- Tombol Pengajuan Cuti -->
+    <Button
+        android:id="@+id/button_pengajuan_cuti"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ajukan Cuti"
+        android:background="#003366"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alamat_cuti"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="24dp"
+        android:padding="12dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

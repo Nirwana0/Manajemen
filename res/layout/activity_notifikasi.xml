@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".notifikasiActivity">
+
+    <!-- Top Bar Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#1E3E62"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Notifikasi"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Tombol Kembali"
+        android:src="@drawable/panah_kembali"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- Notification Item 1 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/notification_item_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#F8ECEC"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintWidth_percent="0.9">
+
+        <!-- Date Range -->
+        <TextView
+            android:id="@+id/tvDateRange1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Selasa, 12 Sep 2023 - Rabu, 13 Sep 2023"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Status (Izin) -->
+        <TextView
+            android:id="@+id/tvStatus1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="#FFC0C0"
+            android:paddingHorizontal="8dp"
+            android:text="Izin"
+            android:textColor="#B71C1C"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDateRange1" />
+
+        <!-- Approval Status -->
+        <TextView
+            android:id="@+id/tvApprovalStatus1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="#FFC0C0"
+            android:paddingHorizontal="8dp"
+            android:text="Belum disetujui"
+            android:textColor="#B71C1C"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tvStatus1"
+            app:layout_constraintTop_toBottomOf="@id/tvDateRange1" />
+
+        <!-- Request Date -->
+        <TextView
+            android:id="@+id/tvRequestDate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Tanggal pengajuan: Senin, 11 Sep 2023"
+            android:textColor="#757575"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStatus1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Notification Item 2 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/notification_item_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#F8ECEC"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notification_item_1"
+        app:layout_constraintWidth_percent="0.9">
+
+        <!-- Date Range -->
+        <TextView
+            android:id="@+id/tvDateRange2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Rabu, 4 Sep 2023"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Status (Sakit) -->
+        <TextView
+            android:id="@+id/tvStatus2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="#FFC0C0"
+            android:paddingHorizontal="8dp"
+            android:text="Sakit"
+            android:textColor="#B71C1C"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDateRange2" />
+
+        <!-- Approval Status -->
+        <TextView
+            android:id="@+id/tvApprovalStatus2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="#FFC0C0"
+            android:paddingHorizontal="8dp"
+            android:text="Disetujui"
+            android:textColor="#B71C1C"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tvStatus2"
+            app:layout_constraintTop_toBottomOf="@id/tvDateRange2" />
+
+        <!-- Request Date -->
+        <TextView
+            android:id="@+id/tvRequestDate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Tanggal pengajuan: Senin, 11 Sep 2023"
+            android:textColor="#757575"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStatus2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

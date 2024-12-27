@@ -1,0 +1,137 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- Header -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#1E3E62"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Back Arrow Icon -->
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Back Arrow"
+            android:src="@drawable/panah_kembali"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Header Text -->
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Rekapitulasi"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Spinners -->
+    <Spinner
+        android:id="@+id/spinnerBulan"
+        android:layout_width="145dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/array_bulan"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout" />
+
+    <!-- Attendance Summary -->
+
+    <Spinner
+        android:id="@+id/spinnerTahun"
+        android:layout_width="145dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/array_tahun"
+        android:padding="10dp"
+        app:layout_constraintStart_toEndOf="@id/spinnerBulan"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout" />
+
+    <TextView
+        android:id="@+id/tvAttendanceCircle"
+        android:layout_width="121dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/circular_progress_background"
+        android:gravity="center"
+        android:text="30.91\n5/20 Hari"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerTahun" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="168dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="48dp"
+        android:padding="8dp"
+        app:layout_constraintStart_toEndOf="@id/tvAttendanceCircle"
+        app:layout_constraintTop_toTopOf="@id/tvAttendanceCircle">
+
+        <TextView
+            android:id="@+id/tvHadir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hadir   3 Hari"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvIzin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Izin   3 Hari"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvHadir"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvSakit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Sakit   0 Hari"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvIzin"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:stretchColumns="1"
+        app:layout_constraintTop_toBottomOf="@id/tvAttendanceCircle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

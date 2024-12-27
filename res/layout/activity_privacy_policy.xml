@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient_background">
+
+    <!-- Header Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerSection"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#1E3E62"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Back Button -->
+
+        <!-- Header Title -->
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Tombol Kembali"
+            android:src="@drawable/panah_kembali"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <!-- Header Text -->
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="116dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Kebijakan privasi"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Main Content -->
+    <ScrollView
+        android:id="@+id/mainContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/headerSection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Introduction -->
+            <TextView
+                android:id="@+id/tvIntroduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kami menghargai privasi pengguna. Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi data Anda."
+                android:textSize="16sp"
+                android:lineSpacingExtra="8sp"
+                android:paddingBottom="16dp"
+                android:textColor="#000000" />
+
+            <!-- Point 1 -->
+            <TextView
+                android:id="@+id/tvDataCollection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Data yang Dikumpulkan:"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingBottom="8dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tvDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- Nama, NIP, Jabatan, dan Unit Kerja.\n- Foto selfie untuk verifikasi.\n- Data lokasi untuk memastikan kehadiran."
+                android:textSize="14sp"
+                android:lineSpacingExtra="8sp"
+                android:paddingBottom="16dp"
+                android:textColor="#000000" />
+
+            <!-- Point 2 -->
+            <TextView
+                android:id="@+id/tvDataUsage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Penggunaan Data:"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingBottom="8dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tvUsageDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- Data digunakan untuk memastikan akurasi sistem kehadiran.\n- Tidak akan dibagikan tanpa izin pengguna."
+                android:textSize="14sp"
+                android:lineSpacingExtra="8sp"
+                android:paddingBottom="16dp"
+                android:textColor="#000000" />
+
+            <!-- Point 3 -->
+            <TextView
+                android:id="@+id/tvDataProtection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Perlindungan Data:"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingBottom="8dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tvProtectionDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- Data dienkripsi untuk melindungi informasi pengguna.\n- Kami menggunakan langkah keamanan standar industri."
+                android:textSize="14sp"
+                android:lineSpacingExtra="8sp"
+                android:paddingBottom="16dp"
+                android:textColor="#000000" />
+
+            <!-- Additional Points -->
+            <TextView
+                android:id="@+id/tvAdditionalPoint1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Hak Pengguna:"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingBottom="8dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tvUserRights"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- Pengguna dapat meminta penghapusan data kapan saja.\n- Pengguna memiliki hak untuk mengetahui bagaimana data mereka digunakan."
+                android:textSize="14sp"
+                android:lineSpacingExtra="8sp"
+                android:paddingBottom="16dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tvAdditionalPoint2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. Perubahan Kebijakan:"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingBottom="8dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tvPolicyChanges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- Kami dapat memperbarui kebijakan ini dari waktu ke waktu.\n- Pengguna akan diberitahu tentang perubahan melalui notifikasi aplikasi."
+                android:textSize="14sp"
+                android:lineSpacingExtra="8sp"
+                android:paddingBottom="16dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

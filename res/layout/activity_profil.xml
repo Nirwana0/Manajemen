@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".profilActivity">
+
+    <!-- Top App Bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTopBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#1E3E62"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Back Button Icon -->
+        <ImageView
+            android:id="@+id/ivBackButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/panah_kembali"
+            android:contentDescription="Tombol Kembali"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- App Bar Title -->
+        <TextView
+            android:id="@+id/tvAppBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="136dp"
+            android:text="Setting"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivBackButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Password Security Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPasswordSecurity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/lyr_putih"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clTopBar"
+        app:layout_constraintWidth_percent="0.9">
+
+        <ImageView
+            android:id="@+id/ivPasswordIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/keamanan"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPasswordSecurity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Keamanan Kata Sandi"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivPasswordIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- About Us Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAboutUs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/lyr_putih"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clPasswordSecurity"
+        app:layout_constraintWidth_percent="0.9">
+
+        <ImageView
+            android:id="@+id/ivAboutUsIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/tentang_kami"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAboutUs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Tentang Kami"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivAboutUsIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Privacy Policy Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPrivacyPolicy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/lyr_putih"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clAboutUs"
+        app:layout_constraintWidth_percent="0.9">
+
+        <ImageView
+            android:id="@+id/ivPrivacyPolicyIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/kebijakan_privasi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPrivacyPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Kebijakan Privasi"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivPrivacyPolicyIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Logout Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clLogout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/lyr_putih"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clPrivacyPolicy"
+        app:layout_constraintWidth_percent="0.9">
+
+        <ImageView
+            android:id="@+id/ivLogoutIcon"
+            android:layout_width="31dp"
+            android:layout_height="30dp"
+            android:src="@drawable/keluar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Keluar"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivLogoutIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

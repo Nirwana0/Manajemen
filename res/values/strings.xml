@@ -1,0 +1,54 @@
+<resources>
+    <!-- Nama Aplikasi -->
+    <string name="app_name">Manajemen</string>
+
+    <!-- Daftar Jenis Pengajuan Cuti -->
+    <string-array name="jenis_pengajuan_array">
+        <item>Pilih jenis pengajuan</item> <!-- Placeholder -->
+        <item>Cuti Tahunan</item>
+        <item>Cuti Sakit</item>
+        <item>Cuti Melahirkan</item>
+        <item>Cuti Besar</item>
+        <item>Cuti Alasan Penting</item>
+    </string-array>
+
+    <string-array name="jenis_Kelamin">
+        <item>Jenis kelamin</item> <!-- Placeholder -->
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+    <string-array name="status_Kawin">
+        <item>Belum Kawin</item>
+        <item>Kawin</item>
+        <item>Cerai Hidup</item>
+        <item>Cerai Mati</item>
+    </string-array>
+
+
+
+    <!-- Daftar Bulan -->
+    <string-array name="array_bulan">
+        <item>Januari</item>
+        <item>Februari</item>
+        <item>Maret</item>
+        <item>April</item>
+        <item>Mei</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>Agustus</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Desember</item>
+    </string-array>
+
+    <!-- Daftar Tahun -->
+    <string-array name="array_tahun">
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <!-- Tambahkan tahun lain jika diperlukan -->
+    </string-array>
+</resources>

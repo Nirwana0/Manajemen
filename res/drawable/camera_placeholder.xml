@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="rectangle">
+        <solid android:color="#CCCCCC" /> <!-- Warna abu-abu sebagai warna dasar kotak -->
+        <corners android:radius="4dp" /> <!-- Sudut agak melengkung -->
+        <size
+            android:width="64dp"
+            android:height="64dp" /> <!-- Ukuran kotak -->
+        <stroke
+            android:width="2dp"
+            android:color="#888888" /> <!-- Garis tepi lebih gelap -->
+</shape>

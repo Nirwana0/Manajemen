@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".datadiriActivity">
+
+    <!-- ScrollView untuk menggulirkan konten -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <!-- Layout utama di dalam ScrollView -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Header -->
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#1E3E62"
+                android:padding="16dp"
+                android:text="Data Diri"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Header Title -->
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Tombol Kembali"
+                android:src="@drawable/panah_kembali"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!-- Foto Profil -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/circle"
+                android:contentDescription="Foto Profil"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHeader" />
+
+            <!-- Tombol Update Foto -->
+            <Button
+                android:id="@+id/btnUpdatePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Foto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgProfile" />
+
+            <!-- NIP -->
+            <TextView
+                android:id="@+id/tvNip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NIP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnUpdatePhoto"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp" />
+
+            <EditText
+                android:id="@+id/etNip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="00234567"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNip"
+                android:layout_marginHorizontal="16dp" />
+
+            <!-- Nama -->
+            <TextView
+                android:id="@+id/tvNama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etNip"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp" />
+
+            <EditText
+                android:id="@+id/etNama"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Ade Putri Bustan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNama"
+                android:layout_marginHorizontal="16dp" />
+
+            <!-- Tempat dan Tanggal Lahir -->
+            <TextView
+                android:id="@+id/tvTTL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tempat Tanggal Lahir"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etNama"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp" />
+
+            <EditText
+                android:id="@+id/etTempat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Parepare"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/etTanggal"
+                app:layout_constraintTop_toBottomOf="@id/tvTTL"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/etTanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="16/01/2024"
+                android:inputType="date"
+                app:layout_constraintStart_toEndOf="@+id/etTempat"
+                app:layout_constraintEnd_toStartOf="@+id/imgCalendar"
+                app:layout_constraintTop_toBottomOf="@id/tvTTL"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView
+                android:id="@+id/imgCalendar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="16dp"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/etTanggal" />
+
+            <!-- Jenis Kelamin -->
+            <TextView
+                android:id="@+id/tvJenisKelamin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Kelamin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etTanggal"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp" />
+
+            <EditText
+                android:id="@+id/etJenisKelamin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Laki-laki/Perempuan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvJenisKelamin"
+                android:layout_marginHorizontal="16dp" />
+
+            <!-- NIK -->
+            <TextView
+                android:id="@+id/tvNik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NIK"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etJenisKelamin"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp" />
+
+            <EditText
+                android:id="@+id/etNik"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan NIK"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNik"
+                android:layout_marginHorizontal="16dp" />
+
+            <!-- NPWP -->
+            <TextView
+                android:id="@+id/tvNpwp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NPWP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etNik"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp" />
+
+            <EditText
+                android:id="@+id/etNpwp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan NPWP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNpwp"
+                android:layout_marginHorizontal="16dp" />
+
+            <!-- Jabatan -->
+            <TextView
+                android:id="@+id/tvJabatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jabatan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etNpwp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp" />
+
+            <EditText
+                android:id="@+id/etJabatan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Jabatan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvJabatan"
+                android:layout_marginHorizontal="16dp" />
+
+            <!-- Telepon -->
+            <TextView
+                android:id="@+id/tvTelepon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telepon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etJabatan"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp" />
+
+            <EditText
+                android:id="@+id/etTelepon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Telepon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTelepon"
+                android:layout_marginHorizontal="16dp" />
+
+            <!-- Email -->
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etTelepon"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan Email"
+                android:inputType="textEmailAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEmail"
+                android:layout_marginHorizontal="16dp" />
+
+            <!-- Button Edit -->
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etEmail"
+                android:layout_marginTop="16dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

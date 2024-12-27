@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E3E62"> <!-- Set background biru di root -->
+
+    <!-- Header -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <!-- Header Text -->
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="140dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Absensi Maps"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <!-- Panah Kembali -->
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Back Arrow"
+            android:src="@drawable/panah_kembali"
+            android:onClick="onBackArrowClicked"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Fragment untuk menampilkan Google Maps -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent" />
+
+    <!-- Kontainer untuk menampilkan informasi lokasi dan tombol -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_gravity="bottom"
+        android:background="#80000000">
+
+        <!-- TextView untuk menampilkan info lokasi -->
+        <TextView
+            android:id="@+id/location_info_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:text="Ketuk peta untuk mendapatkan info lokasi"
+            android:paddingBottom="8dp" />
+
+        <!-- Tombol navigasi -->
+        <Button
+            android:id="@+id/navigate_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#1E3E62"
+            android:text="Navigasi ke Halaman Lain" />
+    </LinearLayout>
+</FrameLayout>
